@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='UTF-8' />
-    <title>Sinatra Example</title>
-  </head>
-  <body class='container'>
-    <p>Hello World</p>
-  </body>
-</html>
+<section>
+	<h2>Specify your English Proficiency</h2>
+	<form action='proficiency' method='post'>
+	  <% Levels.each do |id, text| %>
+	    <label class="radio">
+	      <input type='radio' name='proficiency' value='<%= id %>' id='proficiency_<%= id %>' />
+	      <%= text %>
+	    </label><br/>
+	  <% end %>
+	  <button type='submit' class='btn btn-primary'>Submit</button>
+	</form>
+</section>
+
